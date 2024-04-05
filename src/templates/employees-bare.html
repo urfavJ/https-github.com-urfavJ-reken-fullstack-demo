@@ -60,7 +60,7 @@
             title="Save row changes">💾</button>
           <button data-if="!addMode||u.index>0" type="button"
             data-action="deleteOptions.id=u.item.employee_id;deleteOptions.fetch=true" title="Delete row">🗑️</button>
-          <button data-if="addMode&&u.index===0;addMode=false" type="button"
+          <button data-if="addMode&&u.index===0" type="button"
             data-action="createOptions.fetch=true;createOptions.body=JSON.stringify(u.item);addMode=false;"
             title="Save new row">💾</button>
           <button data-if="addMode&&u.index===0" type="button" data-action="employees.shift();addMode=false"
@@ -78,7 +78,7 @@
   <div hidden data-rest="locations:${SERVER}/api/locations"></div>
 </body>
 <script>
-  const SERVER = location.origin.indexOf('127.0.0.1') >= 0 ? 'http://127.0.0.1:5000' : 'https://api.wordrow.fun'
+  const SERVER = ''
   let employees = []
   let departments = []
   let locations = []
@@ -91,6 +91,4 @@
   let deleteOptions = { fetch: false, method: 'DELETE', callback: (() => { listOptions.fetch = true }), headers: { 'content-type': 'application/json' } }
 </script>
 <script src="https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js"></script>
-<!-- <script src="reken.js"></script> -->
-
 </html>

@@ -69,11 +69,11 @@
       </tr>
   </tfoot>
   </table>
-  <div hidden data-rest="departments:http://127.0.0.1:5000/api/departments"></div>
-  <div hidden data-rest="locations:http://127.0.0.1:5000/api/locations"></div>
+  <div hidden data-rest="departments:${SERVER}/api/departments"></div>
+  <div hidden data-rest="locations:${SERVER}/api/locations"></div>
 </body>
 <script>
-  let SERVER = 'http://127.0.0.1:5000'
+  let SERVER = ''
   let employees = []
   let departments = []
   let locations = []
@@ -86,5 +86,4 @@
   let deleteOptions = { fetch: false, method: 'DELETE', callback: (() => {listOptions.fetch = true }) }
 </script>
 <script src="https://cdn.jsdelivr.net/gh/hbroek/reken/dist/reken.min.js"></script>
-<!-- <script src="reken.js"></script> -->
 </html>
