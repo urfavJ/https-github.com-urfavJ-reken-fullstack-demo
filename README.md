@@ -34,7 +34,7 @@ This opens the Tailwind styled employees Web App.
 To open the unstyled employees Web App. Enter this url: http://127.0.0.1:5000/bare
 
 
-### Docker run instructions docker
+### Docker run instructions
 
 ``` bash
 # Build docker image
